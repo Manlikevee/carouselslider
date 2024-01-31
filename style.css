@@ -1,0 +1,59 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.panorama-slider-wrapper {
+  margin-left: -45px; 
+  overflow: hidden;
+}
+
+.panorama-slider {
+   padding: 150px 30px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+/*   transform: rotate(15deg); */
+  transform: rotate3d(3, 0, 1, 20deg);
+}
+
+.panorama-slider .swiper {
+  width: 100%;
+/*   height: 280px; */
+  overflow: visible;
+}
+
+.swiper-3d {
+  perspective: 1200px;
+}
+
+.swiper-3d .swiper-wrapper,
+.swiper-3d .swiper-slide {
+  transform-style: preserve-3d; 
+}
+
+.swiper-3d .swiper-slide { 
+  width: 40%;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+}
